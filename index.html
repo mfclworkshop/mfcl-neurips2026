@@ -41,11 +41,31 @@
         <h2 class="text-3xl font-bold mb-8 text-slate-800">Workshop Motivation</h2>
         <div class="accent-border pl-6 space-y-4 text-lg">
             <p>
-                While modern foundation models excel on static, i.i.d. datasets, real-world deployment demands adaptivity at scale. 
-                Standard optimization algorithms often fail over long horizons, suffering from catastrophic forgetting and loss of plasticity (Sanati et al., 2025; Shi et al., 2025; Lyle et al., 2024; Dohare et al., 2024).
+                Modern machine learning faces a disconnect between how models are trained and how they are deployed. 
+                Today's most capable models are typically trained on static datasets, yet they must operate in dynamic, 
+                continually evolving environments (Thrun, 1998; Ring, 1994). This discrepancy creates an urgent need for 
+                learning algorithms that can adapt continually across a variety of settings. Because of this widespread demand, 
+                research on continual adaptation has become fragmented across multiple communities, including supervised continual 
+                learning, continual reinforcement learning, online learning, test-time adaptation, in-context learning, 
+                and meta-learning, each with its own terminology, benchmarks, and evaluation 
+                protocols (see Wang et al., 2024, for a recent survey).
             </p>
             <p>
-                MFCL 2026 shifts the focus from "benchmark-chasing" to thinking about mathematical foundations. We bring together experts from optimization, deep learning theory, and statistical learning to build a shared theoretical language for sequential learning.
+                The absence of a unified mathematical foundation of adaptation has left many of its fundamental aspects insufficiently 
+                formalized. Core concepts such as memory, transfer, and forgetting often lack precise definitions, leading to frequent 
+                misinterpretation and hindering effective communication across communities (Abel et al., 2023; Sanati et al., 2025). 
+                Consequently, benchmark-driven evaluation has become the primary indicator of progress (Van de Ven et al., 2022), 
+                leaving the foundations of adaptation underexplored.
+            </p>
+            <p>
+                We believe that building systems that are natively adaptive requires more than incremental work on 
+                foundations designed for static settings—it requires treating adaptivity as a first principle rather than a fix. 
+                A more expressive mathematical language is needed to define objectives, evaluate behaviour, and compare methods, 
+                e.g., beyond the in-distribution / out-of-distribution dichotomy. Such foundations would provide conceptual clarity,
+                unify research fields that are currently disconnected, and translate into practical gains in how continual learning 
+                methods are designed and evaluated. This workshop aims to advance this effort by bringing together researchers 
+                across machine learning to discuss the foundations of continual learning, supporting a shift from benchmark-driven 
+                evaluation toward a more rigorous scientific understanding of continual adaptation
             </p>
         </div>
     </section>
