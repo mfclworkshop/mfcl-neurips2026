@@ -18,18 +18,19 @@
             <div class="space-x-6 text-sm font-medium">
                 <a href="#about" class="hover:text-blue-600 transition">About</a>
                 <a href="#speakers" class="hover:text-blue-600 transition">Speakers</a>
+                <a href="#panel" class="hover:text-blue-600 transition">Panel</a>
                 <a href="#call" class="hover:text-blue-600 transition">Call for Papers</a>
                 <a href="#organizers" class="hover:text-blue-600 transition">Organizers</a>
             </div>
         </div>
     </nav>
     <div class="bg-amber-100 border-b border-amber-200 text-amber-900 text-sm py-2 px-6 text-center">
-    Website currently under development. Speakers, schedule, and program details will continue to be updated. This proposal is under review at NeurIPS 2026 and not fully confirmed. 
+    Schedule and program details will continue to be updated. This proposal is under review at NeurIPS 2026 and not fully confirmed. 
 </div>
     <header class="hero-gradient text-white py-20 px-6">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Mathematical Foundations of Continual Learning</h1>
-            <p class="text-xl text-slate-300 mb-8 font-light">Bridging the gap between static optimization and lifelong adaptation.</p>
+            <p class="text-xl text-slate-300 mb-8 font-light">Continual learning beyond benchmarks: towards a foundational theory of adaptive learning systems</p>
             <div class="flex justify-center gap-4">
                 <span class="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold">NeurIPS 2026 Workshop Proposal</span>
                 <span class="bg-slate-700 px-4 py-2 rounded-full text-sm font-semibold">Sydney, Australia</span>
@@ -37,26 +38,65 @@
         </div>
     </header>
 
-    <section id="about" class="py-16 px-6 max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8 text-slate-800">Workshop Motivation</h2>
-        <div class="accent-border pl-6 space-y-4 text-lg">
-                <p>
-                Modern machine learning faces a fundamental disconnect between how models are trained and how they are deployed. 
-                State-of-the-art systems are typically trained on static datasets, yet real-world environments evolve continuously over time. 
-                As a result, deployed models must continually adapt to new information without compromising previously learned capabilities.
+    <section id="about" class="py-16 px-6 max-w-5xl mx-auto">
+        <div class="mb-10">
+            <div class="text-sm uppercase tracking-wide text-blue-600 font-bold mb-3">Why this workshop?</div>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-5 text-slate-900">Workshop Motivation</h2>
+            <p class="text-lg md:text-xl text-blue-800 font-semibold max-w-4xl mb-5">
+                The study of continual adaptation spans many communities, but its core concepts remain fragmented across different languages, assumptions, and mathematical frameworks.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5 mb-10">
+            <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+                <div class="text-blue-600 font-bold text-sm uppercase tracking-wide mb-3">01</div>
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Static Training</h3>
+                <p class="text-slate-600">
+                    Most learning theory still begins with fixed datasets, fixed objectives, and fixed evaluation distributions.
                 </p>
-                <p>
-                Despite recent empirical progress in continual learning, the principles governing sustained adaptation remain poorly understood. 
-                Consequently, concepts such as memory, transfer, and forgetting are often used colloquially and lack precise definitions, leading 
-                to inconsistent interpretations and hindering effective communication between researchers (Abel et al., 2023; Sanati et al., 2025). 
-                Establishing the mathematical foundations of adaptation is therefore essential. 
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+                <div class="text-blue-600 font-bold text-sm uppercase tracking-wide mb-3">02</div>
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Dynamic Worlds</h3>
+                <p class="text-slate-600">
+                    Deployed systems face shifting data, changing tasks, new feedback, and evolving user needs.
                 </p>
-                <p>
-                Beyond improving algorithms, theoretical foundations help formalize intuitions, clarify assumptions, and establish a shared language 
-                for reasoning about adaptation. They allow conceptual clarity to the field and help unify previously disconnected lines of research. 
-                This workshop aims to advance this effort by bringing together researchers from continual learning, online learning, reinforcement learning, 
-                meta-learning, optimization, and related areas to develop shared perspectives on the principles of continual adaptation. 
-               </p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+                <div class="text-blue-600 font-bold text-sm uppercase tracking-wide mb-3">03</div>
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Missing Foundations</h3>
+                <p class="text-slate-600">
+                    Concepts such as plasticity, forgetting, and transfer remain difficult to define precisely.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-blue-900 text-white rounded-lg p-7 md:p-8 mb-10 shadow-sm">
+            <div class="text-blue-200 text-sm uppercase tracking-wide font-bold mb-3">Central Question</div>
+            <p class="text-2xl md:text-3xl font-bold leading-snug">
+                How can continual learning move beyond benchmark-driven progress toward a foundational theory of adaptation?
+            </p>
+        </div>
+
+        <div class="accent-border pl-6 space-y-5 text-lg text-slate-700">
+            <p>
+                Modern machine learning faces a fundamental disconnect between how models are trained and how they are deployed.
+                State-of-the-art systems are typically trained on static datasets, yet real-world environments evolve continuously (Parisi et al., 2018).
+                As a result, deployed models must continually adapt to new information without compromising previously learned capabilities (Kirkpatrick et al., 2017; Goodfellow et al., 2014; Thrun, 1998).
+            </p>
+            <p>
+                Despite recent empirical progress in continual learning (Van de Ven et al., 2022), the principles governing sustained adaptation remain poorly understood.
+                Consequently, concepts such as memory, transfer, and forgetting are often used colloquially and lack precise definitions, leading
+                to inconsistent interpretations and hindering effective communication between researchers
+            </p>
+            <p>
+                Establishing the mathematical foundations of adaptation is therefore essential. Beyond improving algorithms, theoretical foundations help formalize intuitions, clarify assumptions, and establish a shared language
+                for reasoning about adaptation (Abel et al., 2023; Kumar et al., 2025; Sanati et al., 2026). 
+                This workshop aims to advance this effort by bringing together researchers from continual learning, online learning, reinforcement learning,
+                meta-learning, optimization, and related areas to develop shared perspectives on the principles of continual adaptation.
+            </p>
         </div>
     </section>
     
@@ -417,35 +457,118 @@
         We invite contributions that advance the mathematical and conceptual foundations of continual adaptation. We are especially interested in work that connects perspectives across communities, including continual learning, reinforcement learning, online learning, Bayesian inference, optimization, and foundation model training.
     </p>
 
-    <div class="grid md:grid-cols-3 gap-4 mb-10">
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4 mb-10">
         <div class="bg-white rounded-xl p-4 border border-blue-100">
-            <div class="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-1">Submission Deadline</div>
-            <div class="text-blue-800 font-bold">August 29, 2026 AoE</div>
+            <div class="text-xs uppercase tracking-normal leading-snug text-slate-500 font-semibold mb-1">Submission Portal Opens</div>
+            <div class="text-blue-800 font-bold">July 20, 2026, AoE</div>
         </div>
 
         <div class="bg-white rounded-xl p-4 border border-blue-100">
-            <div class="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-1">Notification</div>
-            <div class="text-blue-800 font-bold">September 29, 2026 AoE</div>
+            <div class="text-xs uppercase tracking-normal leading-snug text-slate-500 font-semibold mb-1">Submission Deadline</div>
+            <div class="text-blue-800 font-bold">August 29, 2026, AoE</div>
         </div>
 
         <div class="bg-white rounded-xl p-4 border border-blue-100">
-            <div class="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-1">Workshop Date</div>
+            <div class="text-xs uppercase tracking-normal leading-snug text-slate-500 font-semibold mb-1">Notification</div>
+            <div class="text-blue-800 font-bold">September 29, 2026, AoE</div>
+        </div>
+
+        <!-- <div class="bg-white rounded-xl p-4 border border-blue-100">
+            <div class="text-xs uppercase tracking-normal leading-snug text-slate-500 font-semibold mb-1">Camera-Ready Deadline</div>
+            <div class="text-blue-800 font-bold">October 22, 2026, AoE</div>
+        </div> -->
+
+        <div class="bg-white rounded-xl p-4 border border-blue-100">
+            <div class="text-xs uppercase tracking-normal leading-snug text-slate-500 font-semibold mb-1">Workshop Date</div>
             <div class="text-blue-800 font-bold">December 11–12, 2026</div>
         </div>
     </div>
 
+    <div class="grid lg:grid-cols-2 gap-6 mb-10">
+        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">
+                Submission Format
+            </h3>
+            <ul class="space-y-3 text-slate-700">
+                <li class="flex gap-3">
+                    <span class="text-blue-600 font-bold">•</span>
+                    <span>Submissions should follow the NeurIPS 2026 paper style.</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="text-blue-600 font-bold">•</span>
+                    <span>Reviews will be double-blind, so submitted manuscripts must be anonymized.</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="text-blue-600 font-bold">•</span>
+                    <span>Accepted papers will be presented through non-archival workshop proceedings.</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="text-blue-600 font-bold">•</span>
+                    <span>Submissions should present work in progress or new perspectives, rather than work already published at machine learning conferences or accepted to the main NeurIPS program.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+            <h3 class="text-xl font-semibold mb-4 text-slate-800">
+                Tracks and Review
+            </h3>
+            <div class="grid sm:grid-cols-2 gap-3 mb-5">
+                <div class="rounded-lg bg-blue-50 border border-blue-100 p-3">
+                    <div class="text-blue-700 font-bold text-sm mb-1">Main Track</div>
+                    <p class="text-slate-700 text-sm">
+                        Up to 4 pages, with unlimited references.
+                    </p>
+                </div>
+                <div class="rounded-lg bg-blue-50 border border-blue-100 p-3">
+                    <div class="text-blue-700 font-bold text-sm mb-1">Tiny Track</div>
+                    <p class="text-slate-700 text-sm">
+                        Up to 2 pages, with unlimited references.
+                    </p>
+                </div>
+            </div>
+            <div class="text-blue-700 font-bold mb-2">Review Criteria</div>
+            <ul class="space-y-3 text-slate-700">
+                <li class="flex gap-3">
+                    <span class="text-blue-600 font-bold">•</span>
+                    <span>Connections to the workshop's core themes</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="text-blue-600 font-bold">•</span>
+                    <span>Technical soundness and rigor of the contribution</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="text-blue-600 font-bold">•</span>
+                    <span>Originality and impact of the contribution</span>
+                </li>
+                
+                <li class="flex gap-3">
+                    <span class="text-blue-600 font-bold">•</span>
+                    <span>Potential to stimulate cross-community discussion</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <h3 class="text-2xl font-semibold mb-6 text-slate-800">
-        Example Research Directions
+        Workshop Research Directions
     </h3>
 
     <div class="grid md:grid-cols-2 gap-6 text-slate-700">
-
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+         <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
             <div class="text-blue-700 font-bold mb-2">
-                Forgetting, Plasticity, and Long-Horizon Adaptation
+                Unifying Perspectives Across Learning Paradigms
             </div>
             <p class="text-sm leading-relaxed">
-                Recent work has highlighted catastrophic forgetting and loss of plasticity as central obstacles to continual adaptation.
+                We welcome work connecting continual learning with online learning, Bayesian inference, reinforcement learning, test-time adaptation, and foundation model training. 
+            </p>
+        </div>
+         <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+            <div class="text-blue-700 font-bold mb-2">
+                Learning Dynamics and Representation Formation
+            </div>
+            <p class="text-sm leading-relaxed">
+                Theoretical analyses of feature learning, transfer, interference, and neural network dynamics can help explain when adaptation succeeds or fails.
             </p>
         </div>
 
@@ -458,39 +581,28 @@
                 How should continual adaptation be formalized in sequential decision-making systems?
             </p>
         </div>
-
+        
         <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
             <div class="text-blue-700 font-bold mb-2">
-                Learning Dynamics and Representation Formation
+                Memory, Plasticity, and Forgetting
             </div>
             <p class="text-sm leading-relaxed">
-                Theoretical analyses of feature learning, transfer, interference, and neural network dynamics can help explain when adaptation succeeds or fails.
-            </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
-            <div class="text-blue-700 font-bold mb-2">
-                Unifying Perspectives Across Learning Paradigms
-            </div>
-            <p class="text-sm leading-relaxed">
-                We welcome work connecting continual learning with online learning, Bayesian inference, reinforcement learning, test-time adaptation, and foundation model training. 
+                Recent work has highlighted catastrophic forgetting and loss of plasticity as central obstacles to continual adaptation.
             </p>
         </div>
 
         <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm md:col-span-2">
             <div class="text-blue-700 font-bold mb-2">
-                Concepts, Assumptions, Benchmarks, and Evaluation
+                Concepts, Assumptions, and Evaluation
             </div>
             <p class="text-sm leading-relaxed">
-                We encourage submissions that clarify core concepts such as memory, transfer, forgetting, non-stationarity, and adaptation; propose new problem formulations; or critically examine existing benchmarks and evaluation protocols. We are especially interested in frameworks that generalize across domains rather than being tailored to a single continual learning setting.
+                We encourage submissions that clarify concepts such as memory, transfer, forgetting, non-stationarity, and adaptation; propose new problem formulations; or critically examine existing benchmarks and evaluation protocols. We are especially interested in frameworks that generalize across domains rather than being tailored to a single continual learning setting.
             </p>
         </div>
 
     </div>
 
-    <p class="mt-8 text-slate-700 leading-relaxed">
-        We welcome theoretical, empirical, and position papers, including work that challenges prevailing assumptions or proposes new mathematical frameworks for continual adaptation.
-    </p>
+
 
 </div>
 
