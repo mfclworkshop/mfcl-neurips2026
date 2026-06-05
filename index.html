@@ -87,7 +87,9 @@
                 As a result, deployed models must continually adapt to new information without compromising previously learned capabilities (Kirkpatrick et al., 2017; Goodfellow et al., 2014; Thrun, 1998).
             </p>
             <p>
-                Despite recent empirical progress in continual learning (Van de Ven et al., 2022), the principles governing sustained adaptation remain poorly understood.
+                Despite recent empirical progress in continual learning, the principles governing sustained adaptation remain poorly understood.
+                In practice, progress in the field has been driven by empirical performance improvements (Van de Ven et al., 2022) 
+                more than agreed-upon scientific principles. 
                 Consequently, concepts such as memory, transfer, and forgetting are often used colloquially and lack precise definitions, leading
                 to inconsistent interpretations and hindering effective communication between researchers
             </p>
@@ -517,13 +519,13 @@
                 <div class="rounded-lg bg-blue-50 border border-blue-100 p-3">
                     <div class="text-blue-700 font-bold text-sm mb-1">Main Track</div>
                     <p class="text-slate-700 text-sm">
-                        Up to 4 pages, with unlimited references.
+                        Up to 4 pages, with unlimited reference & appendix.
                     </p>
                 </div>
                 <div class="rounded-lg bg-blue-50 border border-blue-100 p-3">
                     <div class="text-blue-700 font-bold text-sm mb-1">Tiny Track</div>
                     <p class="text-slate-700 text-sm">
-                        Up to 2 pages, with unlimited references.
+                        Up to 2 pages, with unlimited reference & appendix.
                     </p>
                 </div>
             </div>
@@ -557,48 +559,53 @@
     <div class="grid md:grid-cols-2 gap-6 text-slate-700">
          <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
             <div class="text-blue-700 font-bold mb-2">
-                Unifying Perspectives Across Learning Paradigms
-            </div>
+                Theoretical Foundations
+        </div>
             <p class="text-sm leading-relaxed">
-                We welcome work connecting continual learning with online learning, Bayesian inference, reinforcement learning, test-time adaptation, and foundation model training. 
+            Theoretical analyses of sequential adaptation in deep learning systems, 
+            including but not limited to optimization, features and representations, 
+            architectures, memory, and data.            
             </p>
         </div>
          <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
             <div class="text-blue-700 font-bold mb-2">
-                Learning Dynamics and Representation Formation
+                Concepts & Assumptions
             </div>
             <p class="text-sm leading-relaxed">
-                Theoretical analyses of feature learning, transfer, interference, and neural network dynamics can help explain when adaptation succeeds or fails.
-            </p>
+                Work that clarifies core concepts, assumptions, or definitions underlying 
+                continual learning; proposes new problem formulations; or critically examines 
+                commonly accepted paradigms and evaluation methodologies.            </p>
         </div>
 
         <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
             <div class="text-blue-700 font-bold mb-2">
-                Foundations of Adaptation and Non-Stationarity Learning
-
+            Learning Dynamics
             </div>
             <p class="text-sm leading-relaxed">
-                How should continual adaptation be formalized in sequential decision-making systems?
+            Studies of learning dynamics, including phenomena such as catastrophic forgetting,
+            loss of plasticity, stability-plasticity trade-offs, interference, transfer and long-horizon adaptation.
             </p>
         </div>
         
         <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
             <div class="text-blue-700 font-bold mb-2">
-                Memory, Plasticity, and Forgetting
+                Unifying Paradigms
             </div>
             <p class="text-sm leading-relaxed">
-                Recent work has highlighted catastrophic forgetting and loss of plasticity as central obstacles to continual adaptation.
+            Theories and frameworks that connect continual learning across applications and
+            settings, highlighting shared mathematical structure between online learning, reinforcement learning,
+            test-time adaptation, meta-learning, and other relevant fields.            
             </p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm md:col-span-2">
+        <!-- <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm md:col-span-2">
             <div class="text-blue-700 font-bold mb-2">
                 Concepts, Assumptions, and Evaluation
             </div>
             <p class="text-sm leading-relaxed">
                 We encourage submissions that clarify concepts such as memory, transfer, forgetting, non-stationarity, and adaptation; propose new problem formulations; or critically examine existing benchmarks and evaluation protocols. We are especially interested in frameworks that generalize across domains rather than being tailored to a single continual learning setting.
             </p>
-        </div>
+        </div> -->
 
     </div>
 
